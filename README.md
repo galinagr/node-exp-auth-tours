@@ -1,0 +1,1 @@
+# This is an application using NODE.JS, EXPRESS and JavaScript
