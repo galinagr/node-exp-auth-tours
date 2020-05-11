@@ -7,7 +7,7 @@ const mongoSanitaze = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
-
+const compression = require('compression');
 //1. MIDDLEWARES
 const tourRouter = require('./routes/tourRoutes');
 const userRouter = require('./routes/userRoutes');
@@ -61,7 +61,7 @@ app.use(hpp({
     'price']
 }));
 
-
+app.user(compression());
 //Test middleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
